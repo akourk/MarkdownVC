@@ -2,7 +2,6 @@
 Title: Pari Verbis Test Markdown
 StoryID: 123as123fasdf21
 StoryVersion: 72
-Story
 Filename: pariverbistestmarkdown.md
 Description: this looks like a hidden section that can be used for metadata tags or whatever
 ---
