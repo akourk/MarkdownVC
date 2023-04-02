@@ -1,10 +1,15 @@
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
+import java.io.RandomAccessFile;
 
 public class WriteToMD {
+
+    // set initial metadata methods
     public static void setTitle(String filename, String title) {
         try {
             FileWriter myWriter = new FileWriter(filename, true);
@@ -22,7 +27,7 @@ public class WriteToMD {
             FileWriter myWriter = new FileWriter(filename);
             myWriter.write("---\n");
             myWriter.write("Title: " + title + "\n");
-            myWriter.write("StoryID: " + "\n");
+            myWriter.write("StoryID: " + helper.generateUUID() + "\n");
             myWriter.write("StoryVersion: " + 0 + "\n");
             myWriter.write("Filename: " + filename + "\n");
             myWriter.write("Description: " + "\n");
@@ -38,24 +43,25 @@ public class WriteToMD {
         iterateStoryVersion(filename);
     }
 
+    // edit metadata methods
     public static void iterateStoryVersion(String filename) {
         int storyVersion = ReadMD.getStoryVersion(filename);
+        storyVersion++;
+        String newLine = "StoryVersion: " + storyVersion;
 
         try {
-            LineNumberReader lnr = new LineNumberReader(new FileReader(filename));
-            String line;
-            try {
-                line = lnr.readLine();
-                System.out.println(line);
-                System.out.println(lnr.getLineNumber());
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+            RandomAccessFile raf = new RandomAccessFile(filename, "rw");
 
+            // TODO: add checks in here
+            for (int i = 0; i < 3; i++) {
+                raf.readLine();
+            }
+            raf.writeBytes(newLine);
+            raf.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Problem reading file.");
+        }
     }
 }
+
