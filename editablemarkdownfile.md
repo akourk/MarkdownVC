@@ -1,6 +1,6 @@
 ---
 Title: editable markdown file
-StoryID: 3e1469e4-180e-4635-bb8e-0a938a0c10da
+StoryID: ed1e9759-b8d5-4244-b3ae-91681ba3e9b9
 StoryVersion: 0
 Filename: editablemarkdownfile.md
 Description: 
