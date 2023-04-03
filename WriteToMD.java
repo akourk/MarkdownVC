@@ -1,27 +1,15 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.LineNumberReader;
 import java.io.RandomAccessFile;
 
 public class WriteToMD {
-
-    // set initial metadata methods
-    public static void setTitle(String filename, String title) {
-        try {
-            FileWriter myWriter = new FileWriter(filename, true);
-            myWriter.write("# " + title);
-            myWriter.close();
-            System.out.println("Successfully initialized \"" + filename + "\" with the title: \"" + title + "\".");
-        } catch (IOException e) {
-            System.out.println("An error occurred when initializing file: \"" + filename + "\".");
-            e.printStackTrace();
-        }
+    public static void setInitializeFlow(String filename, String title) {
+        setMetaData(filename, title);
+        setTitle(filename, title);
+        setContents(filename);
     }
 
+    // set initial metadata methods
     public static void setMetaData(String filename, String title) {
         try {
             FileWriter myWriter = new FileWriter(filename);
@@ -39,8 +27,32 @@ public class WriteToMD {
             System.out.println("An error occurred while creating metadata for file: \"" + filename + "\".");
             e.printStackTrace();
         }
+    }
 
-        iterateStoryVersion(filename);
+    public static void setTitle(String filename, String title) {
+        try {
+            FileWriter myWriter = new FileWriter(filename, true);
+            myWriter.write("# " + title + "\n");
+            myWriter.write("\n");
+            myWriter.close();
+            System.out.println("Successfully set title of \"" + filename + "\" as: \"" + title + "\".");
+        } catch (IOException e) {
+            System.out.println("An error occurred when setting the title of file: \"" + filename + "\".");
+            e.printStackTrace();
+        }
+    }
+
+    public static void setContents(String filename) {
+        try {
+            FileWriter myWriter = new FileWriter(filename, true);
+            myWriter.write("# Contents\n");
+            myWriter.write("\n");
+            myWriter.close();
+            System.out.println("Successfully created Contents section of \"" + filename + "\".");
+        } catch (IOException e) {
+            System.out.println("An error occurred when trying to create Contents section of file: \"" + filename + "\".");
+            e.printStackTrace();
+        }
     }
 
     // edit metadata methods
@@ -64,4 +76,3 @@ public class WriteToMD {
         }
     }
 }
-
