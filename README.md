@@ -1,29 +1,41 @@
 ---
-Title: Pari Verbis Test Markdown
+Title: Test Markdown
 StoryID: 123as123fasdf21
 StoryVersion: 72
-Filename: pariverbistestmarkdown.md
+Filename: testmarkdown.md
 Description: this looks like a hidden section that can be used for metadata tags or whatever
 ---
 
-# Pari Verbis and Markdown
+# MarkdownVC and Markdown
 
 # Contents
 
- - [Example](#example)
- - [Headings](#headings)
- - [Links](#links)
- - [Formatting](#formatting)
- - [Bullets](#bullets)
- - [Highlighting](#highlighting)
- - [Citation](#citation)
- - [Acknowledgements](#acknowledgements)
+ - [MarkdownVC](#markdownvc)
+    - [Linting](#linting)
+ - [Markdown](#markdown)
+    - [Example](#example)
+    - [Headings](#headings)
+    - [Links](#links)
+    - [Formatting](#formatting)
+    - [Bullets](#bullets)
+    - [Highlighting](#highlighting)
+    - [Citation](#citation)
+    - [Acknowledgements](#acknowledgements)
 
+## MarkdownVC
 
-## Example
+MarkdownVC stuff is here:
+
+### Linting
+
+## Markdown
+
+Any markdown-specific stuff will be down below:
+
+### Example
 See: [this is a link to a .md file on my github](https://raw.githubusercontent.com/akourk/website/main/README.md)
 
-## Headings
+### Headings
 
 # heading level 1
 
@@ -39,7 +51,7 @@ See: [this is a link to a .md file on my github](https://raw.githubusercontent.c
 
 ## Big title thing #2 again
 
-## Links
+### Links
 
 very cool. lets try linking to another .md file. [clickhere](./pariverbistestmarkdowntwo.md) nice work.
 
@@ -50,7 +62,7 @@ Horizontal rule:
 
 cool.
 
-## Formatting
+### Formatting
 
 lets add some code:
 
@@ -68,7 +80,7 @@ class Main {
 
 this looks great
 
-## Bullets
+### Bullets
 
  lets see if we can do some bullet points or something.
 
@@ -89,14 +101,14 @@ nested bullets:
     - carrot
     - broccolli
 
-## Highlighting
+### Highlighting
 
 lets try making some highlights. here's one `something`.
 here's another one. this is a link and a highlight: [`./pariverbistestmarkdowntwo.md`]
 
 can we link to a section?
 
-## Citation
+### Citation
 
 can we site something? 
 [markdown2](./pariverbistestmarkdowntwo.md)<sup>[1]</sup>
@@ -105,6 +117,6 @@ lets make that [1] clickable:
  file[<sup>[1]</sup>](./pariverbistestmarkdowntwo.md)
 
 
-## Acknowledgements
+### Acknowledgements
 
 [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz), honestly.
