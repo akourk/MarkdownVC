@@ -12,11 +12,15 @@ Description: this looks like a hidden section that can be used for metadata tags
 
 - [MarkdownVC](#markdownvc)
     - [Linting](#linting)
+        - [Metadata](#metadata)
+        - [Title](#title)
 - [Markdown](#markdown)
     - [Example](#example)
     - [Headings](#headings)
     - [Links](#links)
     - [Formatting](#formatting)
+        - [Code Blocks](#code-blocks)
+        - [Quote Blocks](#quote-blocks)
     - [Bullets](#bullets)
     - [Highlighting](#highlighting)
     - [Citation](#citation)
@@ -84,6 +88,8 @@ cool.
 
 ### Formatting
 
+#### Code Blocks
+
 lets add some code:
 
 ```java
@@ -93,6 +99,29 @@ class Main {
     }
 }
 ```
+
+#### Quote Blocks
+
+here's a quote block:
+
+> Somewhere, something incredible is waiting to be known
+
+here's a nested quote block:
+
+> _Crab:_
+> > What a counterintuitive picture you paint, Dr. Anteater. It seems that, if what you say is true, in order to grasp the whole structure, you have to describe it omitting any mention of its fundamental building blocks.
+> 
+> _Anteater:_
+> > Perhaps I can make it a little clearer by an analogy. Imagine you have before you a Charles Dickens novel.
+> 
+> _Achilles:_
+> > The Pickwick Papers--will that do?
+> 
+> _Anteater:_
+> 
+> > Excellently! And now imagine trying the following game: you must find a way of mapping letters onto ideas, so that the entire Pickwick Papers makes sense when you read it letter by letter.
+
+And these can be deeply nested.
 
 ## Lets do some other sections
 
